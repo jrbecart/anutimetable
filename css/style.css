@@ -5,6 +5,39 @@
 	width:100%;
 	}
 
+.hiddenfile {
+ width: 0px;
+ height: 0px;
+ overflow: hidden;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 h1 {
 	display: inline-block;
 }
@@ -15,19 +48,117 @@ h2 {
 	/*color: red;*/
 }
 
+
+@media print
+{
+  .noprint {display:none;}
+  
+  .timeslot {
+    border-color: black !important;
+  }
+  
+  th {
+    border-color: black !important;
+  }
+}
+
+.timeslot {
+  padding: 1px !important;
+  min-width: 55px !important;
+}
+
+.lesson-big {
+  min-width: 100px;
+  font-size: small !important;
+}
+
+/*
+nth-child(2)
+column-gap: 20px;
+*/
+.spaceright
+{
+  border-spacing: 90px 5px;
+  border-right: 19px solid #E3E3EF !important; 
+}
+
+.boldleftcol
+{
+  border-left-color: #001dff !important;
+  border-left-width: 4px !important;
+  border-left-style: dotted!important;
+}
+
+.boldleftcolRed
+{
+  border-left-color: red !important;
+  border-left-width: 2px !important;
+  border-left-style: dashed !important;
+}
+
+.testBgndWhite
+{
+  background-color: white !important;
+}
+
+.testBgndBlack
+{
+  background-color: black !important;
+}
+
+.testBgndGrey
+{
+  background-color: grey !important;
+}
+
+.hight-priority-course
+{
+  border-color: red !important;
+  border-width: 3px !important;
+  border-style: dashed !important;
+  padding: 5px !important;
+}
+
+.low-priority-course
+{
+  border-color: #60ff00 !important;
+  border-width: 3px !important;
+  border-style: dashed !important;
+  padding: 5px !important;
+}
+ 
+#cal-container2 {
+  padding-right: 20px !important;
+}
+
+#chosenCourses {
+  display: block;
+}
+
+
+
+.container_ {
+  width: 99%;
+  padding-left: 10px;
+}
+
+.hours {
+  width: 1%;
+}
+
 /* Colours to distinguish different classes */
 
 .lesson {
     color         : #555;
-    padding-left  : 3px;
-    margin-top    : 2px;
-    margin-bottom : 2px;
+    padding-left  : 0;
+    font-size: x-small;
 }
 
 .title {
     color         : #4C6E78;
 }
 
+/*
 .lesson-style-1 {
     border-color     : #660066;
     background-color : #FFCCFF;
@@ -56,11 +187,285 @@ h2 {
 .lesson-style-6 {
     border-color     : #006666;
     background-color : #CCFFFF;
+}*/
+
+/*
+[class*="lesson-style-"]:hover {
+  background: #ffff00;
 }
+*/
+
+#configName {
+  display: inline;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.lessonHighlight {
+  /*background: #ffff00 !important;*/
+  background-image: linear-gradient(-90deg, #17DFFE, #7FFF00, #ffff00);
+  /*font-weight: bold;
+  border-color: red !important;
+  border-width: 4px !important;
+  border-style: solid !important;
+  min-width: 47px !important;*/
+}
+
+.lesson-style-1 {
+    border-color     : #006666;
+    background-color : #E3B2FF;
+}
+
+.lesson-style-2 {
+    border-color     : #006666;
+    background-color : #FFF1E5;
+}
+
+.lesson-style-3 {
+    border-color     : #006666;
+    background-color : #FFCCF7;
+}
+
+.lesson-style-4 {
+    border-color     : #006666;
+    background-color : #FF99EF;
+}
+
+.lesson-style-5 {
+    border-color     : #006666;
+    background-color : #004c0573;
+}
+
+.lesson-style-6 {
+    border-color     : #006666;
+    background-color : #0091ff7d;
+}
+
+.lesson-style-7 {
+    border-color     : #006666;
+    background-color : #FFF766;
+}
+
+.lesson-style-8 {
+    border-color     : #006666;
+    background-color : #FFDF7F;
+}
+
+.lesson-style-9 {
+    border-color     : #006666;
+    background-color : #FFFCCC;
+}
+
+.lesson-style-10 {
+    border-color     : #006666;
+    background-color : #0082e5c2;
+}
+
+.lesson-style-11 {
+    border-color     : #006666;
+    background-color : #0082E5;
+}
+
+.lesson-style-12 {
+    border-color     : #006666;
+    background-color : #E5F4FF;
+}
+
+.lesson-style-13 {
+    border-color     : #006666;
+    background-color : #FFB2C1;
+}
+
+.lesson-style-14 {
+    border-color     : #006666;
+    background-color : #D07FFF;
+}
+
+.lesson-style-15 {
+    border-color     : #006666;
+    background-color : #FFF2CC;
+}
+
+.lesson-style-16 {
+    border-color     : #006666;
+    background-color : #FFD866;
+}
+
+.lesson-style-17 {
+    border-color     : #006666;
+    background-color : #FFC899;
+}
+
+.lesson-style-18 {
+    border-color     : #006666;
+    background-color : #FF7F7F;
+}
+
+.lesson-style-19 {
+    border-color     : #006666;
+    background-color : #FFE5EA;
+}
+
+.lesson-style-20 {
+    border-color     : #006666;
+    background-color : #FF66E8;
+}
+
+.lesson-style-21 {
+    border-color     : #006666;
+    background-color : #C766FF;
+}
+
+.lesson-style-22 {
+    border-color     : #006666;
+    background-color : #FF7FEC;
+}
+
+.lesson-style-23 {
+    border-color     : #006666;
+    background-color : #FFF8E5;
+}
+
+.lesson-style-24 {
+    border-color     : #006666;
+    background-color : #FFAD66;
+}
+
+.lesson-style-25 {
+    border-color     : #006666;
+    background-color : #FFCCCC;
+}
+
+.lesson-style-26 {
+    border-color     : #006666;
+    background-color : #FF7F99;
+}
+
+.lesson-style-27 {
+    border-color     : #006666;
+    background-color : #FFBB7F;
+}
+
+.lesson-style-28 {
+    border-color     : #006666;
+    background-color : #FF6684;
+}
+
+.lesson-style-29 {
+    border-color     : #006666;
+    background-color : #FFE599;
+}
+
+.lesson-style-30 {
+    border-color     : #006666;
+    background-color : #00E50F;
+}
+
+.lesson-style-31 {
+    border-color     : #006666;
+    background-color : #CCE9FF;
+}
+
+.lesson-style-32 {
+    border-color     : #006666;
+    background-color : #F5E5FF;
+}
+
+.lesson-style-33 {
+    border-color     : #006666;
+    background-color : #B2DEFF;
+}
+
+.lesson-style-34 {
+    border-color     : #006666;
+    background-color : #CCFFCF;
+}
+
+.lesson-style-35 {
+    border-color     : #006666;
+    background-color : #FF9999;
+}
+
+.lesson-style-36 {
+    border-color     : #006666;
+    background-color : #D999FF;
+}
+
+.lesson-style-37 {
+    border-color     : #006666;
+    background-color : #FFB2B2;
+}
+
+.lesson-style-38 {
+    border-color     : #006666;
+    background-color : #ECCCFF;
+}
+
+.lesson-style-39 {
+    border-color     : #006666;
+    background-color : #FFCCD6;
+}
+
+.lesson-style-40 {
+    border-color     : #006666;
+    background-color : #00B20B;
+}
+
+.lesson-style-41 {
+    border-color     : #006666;
+    background-color : #FFF999;
+}
+
+.lesson-style-42 {
+    border-color     : #006666;
+    background-color : #FF6666;
+}
+
+.lesson-style-43 {
+    border-color     : #006666;
+    background-color : #FFEBB2;
+}
+
+.lesson-style-44 {
+    border-color     : #006666;
+    background-color : #FFF87F;
+}
+
+.lesson-style-45 {
+    border-color     : #006666;
+    background-color : #FFE5E5;
+}
+
+.lesson-style-46 {
+    border-color     : #006666;
+    background-color : #FFFBB2;
+}
+
+.lesson-style-47 {
+    border-color     : #006666;
+    background-color : #FF99AD;
+}
+
+.lesson-style-48 {
+    border-color     : #006666;
+    background-color : #FFB2F3;
+}
+
+.lesson-style-49 {
+    border-color     : #006666;
+    background-color : ##007f08b8;
+}
+
+.lesson-style-50 {
+    border-color     : #006666;
+    background-color : #19FF28;
+}
+
+
 
 .table {
     border-collapse : separate;
-    border-spacing  : 2px;
+    border-spacing: 5px;
 }
 
 .table th {

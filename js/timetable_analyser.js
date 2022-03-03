@@ -78,6 +78,5 @@ var rearrangeLessons = function (uglyLessons) {
             out[courseName] = partitionLessons(coursesPartition[courseName]);
         }
     }
-
     return out;
 };
